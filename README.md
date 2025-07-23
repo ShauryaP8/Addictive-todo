@@ -34,9 +34,7 @@ Welcome to the **most dangerously addictive** to-do list app on the internet —
 ![Task Manager Preview](assets/IMG_5032.jpeg)
 
 ### ⏱️ Focus Timer  
-![Focus Timer Preview](./assets/focus-timer-preview.png)
-
-> *(Don't forget to add your own screenshots above!)*
+![Focus Timer Preview](assets/IMG_5033.jpeg)
 
 ---
 
