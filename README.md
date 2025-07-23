@@ -44,6 +44,7 @@ Welcome to the **most dangerously addictive** to-do list app on the internet —
 ```bash
 git clone https://github.com/yourusername/addictive-todo-app.git
 cd addictive-todo-app
+```
 
 2. Open the app
 
@@ -72,7 +73,7 @@ Want more? Here’s what’s next (feel free to contribute):
 
 Author
 
-Built by Shaurya — passionate about productivity, design, and making your browser just a bit more dangerous.
+Built by Shaurya 
 
 💬 Feel free to open issues or submit PRs — let’s build the most addictive task app together.
 
