@@ -31,7 +31,7 @@ Welcome to the **most dangerously addictive** to-do list app on the internet —
 > _Sleek, minimal, and dopamine-optimized_
 
 ### 🏠 Task Manager  
-![Task Manager Preview](./assets/task-manager-preview.png)
+![Task Manager Preview](assets/IMG_5032.jpeg)
 
 ### ⏱️ Focus Timer  
 ![Focus Timer Preview](./assets/focus-timer-preview.png)
