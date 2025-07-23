@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FocusQuest</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <h1>🔥 FocusQuest</h1>
+
+    <div class="stats">
+      <div>Level: <span id="level">1</span></div>
+      <div>XP: <span id="xp">0</span>/100</div>
+      <div>Streak: <span id="streak">0</span> 🔥</div>
+    </div>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Add a new quest..." autocomplete="off"/>
+      <button type="submit" aria-label="Add task">+</button>
+    </form>
+
+    <ul id="task-list"></ul>
+
+    <div class="zen" id="zen-mode">🧘 All tasks complete. Zen Mode!</div>
+
+    <!-- Slide-Up Focus Timer Panel -->
+    <div id="focus-panel" class="focus-panel hidden" aria-hidden="true">
+      <div class="focus-panel-header">
+        <span id="focus-panel-task-label">Focus Session</span>
+        <button id="focus-panel-close" aria-label="Close focus panel">×</button>
+      </div>
+
+      <div class="focus-timer-display">
+        <div class="focus-timer-ring" id="focus-timer-ring">
+          <div class="focus-timer-time" id="focus-timer-time">25:00</div>
+        </div>
+      </div>
+
+      <div class="focus-mode-select">
+        <button data-mode="focus" class="focus-mode-btn active">Focus 25m</button>
+        <button data-mode="short" class="focus-mode-btn">Break 5m</button>
+        <button data-mode="long" class="focus-mode-btn">Long 15m</button>
+      </div>
+
+      <div class="focus-panel-controls">
+        <button id="focus-start-stop" class="primary">Start</button>
+        <button id="focus-reset" class="secondary">Reset</button>
+      </div>
+
+      <div id="focus-bonus-banner" class="focus-bonus-banner hidden">
+        Finish this task before time’s up for <strong>+10 XP!</strong>
+      </div>
+
+      <div id="focus-bonus-urgent" class="focus-bonus-urgent hidden">
+        Time’s up! Complete within 60s for <strong>DOUBLE XP!</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio cues -->
+  <audio id="ding" src="https://www.myinstants.com/media/sounds/ding-sound-effect_2.mp3"></audio>
+  <audio id="alarm" src="https://www.myinstants.com/media/sounds/analog-alarm-clock.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
