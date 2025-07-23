@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background: rgba(0,0,0,0.4);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px #fff2;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #ffcc70;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcc70;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #ffd98d;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background: #ffffff10;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+li.completed {
+  background: #88cc88;
+  text-decoration: line-through;
+  color: #000;
+  transform: scale(1.02);
+}
+
+.zen {
+  display: none;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #8ef;
+}
+
+/* --- Focus Panel --- */
+.focus-panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(6px);
+  padding: 24px 20px 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: bottom 0.35s ease;
+  max-width: 480px;
+  margin: 0 auto;
+  z-index: 8000;
+  text-align: center;
+}
+.focus-panel.visible {
+  bottom: 0;
+}
+.focus-panel.hidden {
+  bottom: -100%;
+}
+.focus-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:16px;
+  font-size:1.1em;
+  color:#ffcc70;
+}
+.focus-panel-header button {
+  background: transparent;
+  border:none;
+  color:#fff;
+  font-size:1.5em;
+  line-height:1;
+  cursor:pointer;
+}
+
+.focus-timer-display {
+  margin: 20px auto;
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+.focus-timer-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    conic-gradient(#ffcc70 var(--progress,0%), rgba(255,255,255,0.1) 0);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: background 0.2s linear;
+}
+.focus-timer-time {
+  font-size: 2em;
+  font-weight: bold;
+  color:#fff;
+}
+
+.focus-mode-select {
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin:12px 0 20px;
+}
+.focus-mode-btn {
+  padding:6px 12px;
+  font-size:0.9em;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#ffffff22;
+  color:#fff;
+  transition:0.15s;
+}
+.focus-mode-btn.active {
+  background:#ffcc70;
+  color:#000;
+  font-weight:bold;
+}
+
+.focus-panel-controls {
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:16px;
+}
+.focus-panel-controls button {
+  padding:10px 24px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.15s;
+}
+.focus-panel-controls .primary {
+  background:#ffcc70;
+  color:#000;
+}
+.focus-panel-controls .secondary {
+  background:#ffffff22;
+  color:#fff;
+}
+
+.focus-bonus-banner,
+.focus-bonus-urgent {
+  font-size:0.95em;
+  margin-top:8px;
+}
+.focus-bonus-banner strong,
+.focus-bonus-urgent strong {
+  color:#ffcc70;
+}
+.focus-bonus-urgent {
+  animation: urgentPulse 1s infinite;
+  color:#ff8080;
+}
+
+@keyframes urgentPulse {
+  0% { transform:scale(1); opacity:1;}
+  50% { transform:scale(1.05); opacity:0.8;}
+  100% { transform:scale(1); opacity:1;}
+}
+
+/* Add a small icon-style focus button inside task items */
+.task-focus-btn {
+  margin-left:12px;
+  font-size:0.85em;
+  padding:2px 6px;
+  border:none;
+  border-radius:6px;
+  background:#ffcc7044;
+  color:#ffcc70;
+  cursor:pointer;
+  transition:0.15s;
+}
+.task-focus-btn:hover {
+  background:#ffcc70;
+  color:#000;
+}
+
+li.completed .task-focus-btn {
+  opacity:0.4;
+  pointer-events:none;
+}
+
+/* Confetti canvas stays on top */
+#confetti {
+  pointer-events:none;
+  z-index:9999;
+}
