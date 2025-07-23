@@ -15,14 +15,14 @@ Welcome to the **most dangerously addictive** to-do list app on the internet —
 ✅ Beautiful UI that *feels* satisfying  
 ✅ Smooth animations & transitions  
 ✅ 🎯 Focus Timer (Pomodoro-style) built-in  
-✅ Dark/light mode toggle  
+🕣 Dark/light mode toggle (*Coming soon*)
 ✅ Task streaks and completion stats  
-✅ Motivational quote generator  
-✅ Task sounds + subtle haptics (optional)  
-✅ Keyboard shortcuts for power users  
+🕣 Motivational quote generator (*Coming soon*)  
+✅ Task sounds + subtle haptics  
+🕣 Keyboard shortcuts for power users (*Coming soon*)
 ✅ 🎉 Visual celebration effects  
 ✅ LocalStorage saves all your data  
-✅ Progress bars, smart sorting, and more...
+🕣 Progress bars, smart sorting, and more... (*Coming soon*)
 
 ---
 
@@ -61,7 +61,7 @@ This app isn’t just about getting things done — it’s about making you want
 
 Want more? Here’s what’s next (feel free to contribute):
 
-	•	🎮 Task leveling system (RPG-style)
+	•	🎮 Task leveling system (RPG-style), with acheievments
 	•	🔄 Daily and weekly habits
 	•	📊 Productivity analytics dashboard
 	•	🧠 AI-powered task clarity assistant
